@@ -1,0 +1,24 @@
+{
+  "five": {
+    "cash": 1000.0,
+    "eth": 0.0,
+    "entry": null,
+    "peak": 1824.84,
+    "lastCandle": 1792224600,
+    "trades": [],
+    "lastPrice": 1824.84,
+    "lastUpdate": "2026-10-17T08:17:26.100293+00:00",
+    "error": null
+  },
+  "hourly": {
+    "cash": 1000.0,
+    "eth": 0.0,
+    "entry": null,
+    "peak": 1824.41,
+    "lastCandle": 1792220400,
+    "trades": [],
+    "lastPrice": 1824.41,
+    "lastUpdate": "2026-10-17T08:17:26.187812+00:00",
+    "error": null
+  }
+}
