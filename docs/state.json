@@ -3,12 +3,18 @@
     "cash": 1000.0,
     "eth": 0.0,
     "entry": null,
-    "peak": 1824.84,
-    "lastCandle": 1792224600,
+    "peak": 1825.14,
+    "lastCandle": 1792225500,
     "trades": [],
-    "lastPrice": 1824.84,
-    "lastUpdate": "2026-10-17T08:17:26.100293+00:00",
-    "error": null
+    "lastPrice": 1824.88,
+    "lastUpdate": "2026-10-17T08:33:35.559144+00:00",
+    "error": null,
+    "history": [
+      {
+        "time": "2026-10-17T08:33:35.559144+00:00",
+        "equity": 1000.0
+      }
+    ]
   },
   "hourly": {
     "cash": 1000.0,
@@ -18,7 +24,13 @@
     "lastCandle": 1792220400,
     "trades": [],
     "lastPrice": 1824.41,
-    "lastUpdate": "2026-10-17T08:17:26.187812+00:00",
-    "error": null
+    "lastUpdate": "2026-10-17T08:33:35.595566+00:00",
+    "error": null,
+    "history": [
+      {
+        "time": "2026-10-17T08:33:35.595566+00:00",
+        "equity": 1000.0
+      }
+    ]
   }
 }
