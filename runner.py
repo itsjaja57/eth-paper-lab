@@ -61,9 +61,15 @@ def main():
      if a['eth']==0:a['peak']=last['price']
      a['warning']='Gap in market observations; skipped uncertain fills'
     a['lastCandle']=last['time']
+   a.setdefault('history',[])
+   equity=round(a['cash']+a['eth']*(a['lastPrice'] or a['entry'] or 0),4)
+   stamp=a['lastUpdate']
+   if not a['history'] or a['history'][-1]['time']!=stamp:
+    a['history'].append({'time':stamp,'equity':equity})
+    a['history']=a['history'][-3000:]
   except Exception as exc:
    a['error']=str(exc)[:200]
-   print(name,exc) 
- PATH.parent.mkdir(parents=True, exist_ok=True)
+   print(name,exc)
+ PATH.parent.mkdir(parents=True,exist_ok=True)
  PATH.write_text(json.dumps(state,indent=2)+'\n')
 if __name__=='__main__':main()
