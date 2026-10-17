@@ -63,6 +63,7 @@ def main():
     a['lastCandle']=last['time']
   except Exception as exc:
    a['error']=str(exc)[:200]
-   print(name,exc)
+   print(name,exc) 
+ PATH.parent.mkdir(parents=True, exist_ok=True)
  PATH.write_text(json.dumps(state,indent=2)+'\n')
 if __name__=='__main__':main()
