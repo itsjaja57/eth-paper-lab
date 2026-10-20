@@ -119,6 +119,50 @@ def execute(a, c, context, seconds):
                         'price': price, 'eth': quantity, 'fee': fee})
 
 
+def execute_v3(a, c, context, seconds):
+    """Experimental V3: long-only momentum with lower exposure."""
+    p, t = c['price'], c['time']
+    prices = [x['price'] for x in context]
+    if a['eth'] > 0:
+        entry = a.get('entry')
+        if not entry or entry <= 0:
+            a['warning'] = 'Missing entry price; position not traded'
+            return
+        a['positionHigh'] = max(float(a.get('positionHigh') or entry), p)
+        high = a['positionHigh']
+        stop = max(entry * .98, high * .985) if high >= entry * 1.025 else entry * .98
+        if p <= stop or p >= entry * 1.04:
+            qty = a['eth']
+            fee = qty * p * FEE
+            a['cash'] += qty * p - fee
+            a.update(eth=0., entry=None, positionHigh=None, lastSellCandle=t)
+            a['trades'].append({'time': t*1000, 'side':'SELL', 'price':p,
+                                'eth':qty, 'fee':fee})
+        return
+    if len(prices) < 60:
+        return
+    if t - int(a.get('lastSellCandle') or 0) < 12 * seconds:
+        return
+    # No future candles: indicators only use prices observed through this candle.
+    e12, e26, e50 = (ema(prices, n) for n in (12, 26, 50))
+    prev12 = ema(prices[:-1], 12)
+    returns = [(prices[i] / prices[i-1] - 1) for i in range(-20, 0)]
+    volatility = (sum(r*r for r in returns)/len(returns)) ** .5
+    rising = p > prices[-2] > prices[-3]
+    trend = p > e12 > e26 > e50 and e12 > prev12
+    # Avoid very flat or unusually volatile 5-minute periods.
+    if not (trend and rising and .0007 <= volatility <= .012):
+        return
+    budget = a['cash'] * .25
+    if budget < 1:
+        return
+    fee = budget * FEE
+    qty = (budget-fee)/p
+    a['cash'] -= budget
+    a.update(eth=qty, entry=p, positionHigh=p)
+    a['trades'].append({'time':t*1000, 'side':'BUY', 'price':p,
+                        'eth':qty, 'fee':fee})
+
 def main():
     try:
         state = json.loads(PATH.read_text())
@@ -127,7 +171,7 @@ def main():
     except FileNotFoundError:
         state = {}
     # Do not reset balances or history on corrupt state: stop instead.
-    for name, seconds in [('five', 300), ('hourly', 3600)]:
+    for name, seconds in [('five', 300), ('hourly', 3600), ('five_v3', 300)]:
         a = state.setdefault(name, fresh())
         for key, value in fresh().items():
             a.setdefault(key, value)
@@ -156,7 +200,7 @@ def main():
                     a.pop('warning', None)
                     for c in recent:
                         context = [x for x in series if x['time'] <= c['time']]
-                        execute(a, c, context, seconds)
+                        (execute_v3(a, c, context, seconds) if name == 'five_v3' else execute(a, c, context, seconds))
                 else:
                     a['warning'] = 'Gap in market observations; skipped uncertain fills'
                 a['lastCandle'] = last['time']
