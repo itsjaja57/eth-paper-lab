@@ -93,7 +93,7 @@
     ],
     "lastPrice": 1767.8,
     "lastUpdate": "2026-10-25T04:33:48.869933+00:00",
-    "error": null,
+    "error": "Stale market data",
     "history": [
       {
         "time": "2026-10-17T08:33:35.559144+00:00",
@@ -1804,7 +1804,7 @@
     "eth": 0.0,
     "entry": null,
     "peak": 1795.27,
-    "lastCandle": 1792897200,
+    "lastCandle": 1792900800,
     "trades": [
       {
         "time": 1792242000000,
@@ -1863,8 +1863,8 @@
         "fee": 2.801289182538403
       }
     ],
-    "lastPrice": 1766.02,
-    "lastUpdate": "2026-10-25T04:33:48.970531+00:00",
+    "lastPrice": 1768.95,
+    "lastUpdate": "2026-10-25T05:04:13.575184+00:00",
     "error": null,
     "history": [
       {
@@ -3570,6 +3570,10 @@
       {
         "time": "2026-10-25T04:33:48.970531+00:00",
         "equity": 946.7595
+      },
+      {
+        "time": "2026-10-25T05:04:13.575184+00:00",
+        "equity": 946.7595
       }
     ],
     "positionHigh": null,
@@ -3648,7 +3652,7 @@
     ],
     "lastPrice": 1767.8,
     "lastUpdate": "2026-10-25T04:33:49.003246+00:00",
-    "error": null,
+    "error": "Stale market data",
     "history": [
       {
         "time": "2026-10-20T09:54:26.411925+00:00",
