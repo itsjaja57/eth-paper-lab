@@ -4,7 +4,7 @@
     "eth": 0.0,
     "entry": null,
     "peak": 1429.42,
-    "lastCandle": 1794633600,
+    "lastCandle": 1794636300,
     "trades": [
       {
         "time": 1792241100000,
@@ -301,8 +301,8 @@
         "fee": 2.2881017682015616
       }
     ],
-    "lastPrice": 1440.29,
-    "lastUpdate": "2026-11-14T05:25:50.792620+00:00",
+    "lastPrice": 1441.0,
+    "lastUpdate": "2026-11-14T06:10:02.676252+00:00",
     "error": null,
     "history": [
       {
@@ -4724,17 +4724,22 @@
       {
         "time": "2026-11-14T05:25:50.792620+00:00",
         "equity": 772.1056
+      },
+      {
+        "time": "2026-11-14T06:10:02.676252+00:00",
+        "equity": 772.1056
       }
     ],
     "positionHigh": null,
-    "lastSellCandle": 1794623100
+    "lastSellCandle": 1794623100,
+    "warning": "Gap in market observations; skipped uncertain fills"
   },
   "hourly": {
     "cash": 905.2740686462822,
     "eth": 0.0,
     "entry": null,
     "peak": 1522.92,
-    "lastCandle": 1794628800,
+    "lastCandle": 1794632400,
     "trades": [
       {
         "time": 1792242000000,
@@ -4849,8 +4854,8 @@
         "fee": 2.6806143206960975
       }
     ],
-    "lastPrice": 1439.73,
-    "lastUpdate": "2026-11-14T05:25:50.866389+00:00",
+    "lastPrice": 1442.6,
+    "lastUpdate": "2026-11-14T06:10:02.779649+00:00",
     "error": null,
     "history": [
       {
@@ -9280,6 +9285,10 @@
       {
         "time": "2026-11-14T05:25:50.866389+00:00",
         "equity": 905.2741
+      },
+      {
+        "time": "2026-11-14T06:10:02.779649+00:00",
+        "equity": 905.2741
       }
     ],
     "positionHigh": null,
@@ -9290,7 +9299,7 @@
     "eth": 0.0,
     "entry": null,
     "peak": 1778.73,
-    "lastCandle": 1794633600,
+    "lastCandle": 1794636300,
     "trades": [
       {
         "time": 1792504800000,
@@ -9475,8 +9484,8 @@
         "fee": 1.375871710825098
       }
     ],
-    "lastPrice": 1440.29,
-    "lastUpdate": "2026-11-14T05:25:50.895107+00:00",
+    "lastPrice": 1441.0,
+    "lastUpdate": "2026-11-14T06:10:02.818292+00:00",
     "error": null,
     "history": [
       {
@@ -13182,9 +13191,14 @@
       {
         "time": "2026-11-14T05:25:50.895107+00:00",
         "equity": 934.5616
+      },
+      {
+        "time": "2026-11-14T06:10:02.818292+00:00",
+        "equity": 934.5616
       }
     ],
     "positionHigh": null,
-    "lastSellCandle": 1794622800
+    "lastSellCandle": 1794622800,
+    "warning": "Gap in market observations; skipped uncertain fills"
   }
 }
