@@ -4,7 +4,7 @@
     "eth": 0.2625733287524268,
     "entry": 1356.07,
     "peak": null,
-    "lastCandle": 1795053000,
+    "lastCandle": 1795080900,
     "trades": [
       {
         "time": 1792241100000,
@@ -378,8 +378,8 @@
         "fee": 2.149302699726177
       }
     ],
-    "lastPrice": 1351.88,
-    "lastUpdate": "2026-11-19T01:57:58.123874+00:00",
+    "lastPrice": 1372.97,
+    "lastUpdate": "2026-11-19T09:44:22.831617+00:00",
     "error": null,
     "history": [
       {
@@ -5049,17 +5049,22 @@
       {
         "time": "2026-11-19T01:57:58.123874+00:00",
         "equity": 713.1847
+      },
+      {
+        "time": "2026-11-19T09:44:22.831617+00:00",
+        "equity": 718.7224
       }
     ],
     "positionHigh": 1359.15,
-    "lastSellCandle": 1795018500
+    "lastSellCandle": 1795018500,
+    "warning": "Gap in market observations; skipped uncertain fills"
   },
   "hourly": {
-    "cash": 890.2728759766967,
-    "eth": 0.0,
-    "entry": null,
-    "peak": 1351.37,
-    "lastCandle": 1795046400,
+    "cash": 445.13643798834835,
+    "eth": 0.32183530888437634,
+    "entry": 1374.82,
+    "peak": null,
+    "lastCandle": 1795075200,
     "trades": [
       {
         "time": 1792242000000,
@@ -5186,10 +5191,17 @@
         "price": 1351.37,
         "eth": 0.3258008589014984,
         "fee": 2.641665040162307
+      },
+      {
+        "time": 1795068000000,
+        "side": "BUY",
+        "price": 1374.82,
+        "eth": 0.32183530888437634,
+        "fee": 2.6708186279300903
       }
     ],
-    "lastPrice": 1357.19,
-    "lastUpdate": "2026-11-19T01:57:58.262515+00:00",
+    "lastPrice": 1370.17,
+    "lastUpdate": "2026-11-19T09:44:22.897836+00:00",
     "error": null,
     "history": [
       {
@@ -9867,9 +9879,13 @@
       {
         "time": "2026-11-19T01:57:58.262515+00:00",
         "equity": 890.2729
+      },
+      {
+        "time": "2026-11-19T09:44:22.897836+00:00",
+        "equity": 886.1055
       }
     ],
-    "positionHigh": null,
+    "positionHigh": 1374.82,
     "lastSellCandle": 1794927600
   },
   "five_v3": {
@@ -9877,7 +9893,7 @@
     "eth": 0.16676254118469935,
     "entry": 1344.17,
     "peak": 1778.73,
-    "lastCandle": 1795053000,
+    "lastCandle": 1795080900,
     "trades": [
       {
         "time": 1792504800000,
@@ -10125,8 +10141,8 @@
         "fee": 1.3530615995024386
       }
     ],
-    "lastPrice": 1351.88,
-    "lastUpdate": "2026-11-19T01:57:58.301405+00:00",
+    "lastPrice": 1372.97,
+    "lastUpdate": "2026-11-19T09:44:22.918890+00:00",
     "error": null,
     "history": [
       {
@@ -14080,9 +14096,14 @@
       {
         "time": "2026-11-19T01:57:58.301405+00:00",
         "equity": 901.9737
+      },
+      {
+        "time": "2026-11-19T09:44:22.918890+00:00",
+        "equity": 905.4908
       }
     ],
     "positionHigh": 1359.15,
-    "lastSellCandle": 1795018500
+    "lastSellCandle": 1795018500,
+    "warning": "Gap in market observations; skipped uncertain fills"
   }
 }
